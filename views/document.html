@@ -1,0 +1,29 @@
+<div class="container">
+    <h3>Liste des documents</h3>
+    <div class="row">
+        <div class="col-md-8">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>author</th>
+                    <th>actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="document in documents">
+                    <td class="col-md-3">{{document.id}}</td>
+                    <td class="col-md-3">{{document.title}}</td>
+                    <td class="col-md-3">{{document.author}}</td>
+                    <td class="col-md-3">
+                        <a href="#!document/{{document.id}}">view details</a> |
+                        <a href="#" ng-click="word(document.id)">word</a> |
+                        <a href="#" ng-click="pdf(document.id)">pdf</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
